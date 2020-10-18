@@ -1,8 +1,8 @@
 form {
-  width:70rem;
+  width: 70rem;
   margin: 6.4rem auto;
   background: white;
-  border: 1px solid #D3E2E5;
+  border: 1px solid #d3e2e5;
 
   border-radius: 2rem;
 
@@ -38,16 +38,15 @@ fieldset legend {
 }
 
 .input-block label {
-  color: #8FA7B3;
-  margin-bottom: .8rem;
+  color: #8fa7b3;
+  margin-bottom: 0.8rem;
   line-height: 1.5;
 }
 
 .input-block label span {
   font-size: 1.4rem;
-  color: #8FA7B3;
+  color: #8fa7d3;
   margin-left: 2.4rem;
-  line-height: 1.5;
 }
 
 .input-block input,
@@ -86,6 +85,7 @@ fieldset legend {
   padding: 0 1.6rem;
   margin-top: 2.4rem;
   border-radius: 2rem;
+
   cursor: pointer;
 }
 
@@ -101,10 +101,15 @@ fieldset legend {
   position: absolute;
   right: 12px;
   bottom: 14px;
+
+  display: flex;
+
   background: #ffffff;
   border: 1px solid #d3e2e5;
-  display: flex;
   border-radius: 10px;
-  padding: .6rem;
+  box-sizing: border-box;
+
+  padding: 0.6rem;
+
   cursor: pointer;
 }
