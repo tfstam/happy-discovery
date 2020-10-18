@@ -3,43 +3,41 @@ const options = {
   touchZoom: false,
   doubleClickZoom: false,
   scrollWheelZoom: false,
-  zoomControl: false
-}
+  zoomControl: false,
+};
 
-// create map
-const map = L.map('mapid', options).setView([-27.222633, -49.6455874], 15);
+const lat = document.querySelector("span[data-lat]").dataset.lat;
+const lng = document.querySelector("span[data-lng]").dataset.lng;
 
-// create and add tileLayer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+const map = L.map("mapid", options).setView([lat, lng], 15);
 
-// create icon
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
+
 const icon = L.icon({
-  iconUrl: './public/images/map-marker.svg',
+  iconUrl: "/images/map-marker.svg",
   iconSize: [58, 68],
-  iconAnchor: [29,68],
-  popupAnchor: [170, 2]
-})
+  iconAnchor: [29, 68],
+  popAnchor: [170, 2],
+});
 
-// create and add marker
-L
-.marker([-27.222633, -49.6455874], { icon })
-.addTo(map)
+L.marker([lat, lng], { icon }).addTo(map);
 
-// Image gallery
+/* image gallery */
+
 function selectImage(event) {
-  const button = event.currentTarget
-  const buttons = document.querySelectorAll(".images button")
+  const button = event.currentTarget;
 
-  buttons.forEach(removeActiveClass)
+  const buttons = document.querySelectorAll(".images button");
+  buttons.forEach(removeActiveClass);
 
   function removeActiveClass(button) {
-    button.classList.remove('active')
+    button.classList.remove("active");
   }
 
-  const image = button.children[0]
-  const imageContainer = document.querySelector('.orphanage-details > img')
+  const image = button.children[0];
+  const imageContainer = document.querySelector(".orphanage-details > img");
 
-  imageContainer.src = image.src
+  imageContainer.src = image.src;
 
-  button.classList.add('active')
+  button.classList.add("active");
 }

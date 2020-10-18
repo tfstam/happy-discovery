@@ -1,8 +1,7 @@
-/* map */
 .map-container {
   margin-top: 6.4rem;
-  background: #E6F7FB;
-  border: 1px solid #DDE3F0;
+  background: #e6f7fb;
+  border: 1px solid #dde3f0;
   border-radius: 2rem;
 }
 
@@ -13,13 +12,14 @@
 
 .map-container footer {
   padding: 2rem 0;
-  text-align: center; 
-  font-weight: 700;
+
+  text-align: center;
 }
 
-.map-container footer a{
+.map-container footer a {
   color: #0089a5;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .map-container .leaflet-container {
